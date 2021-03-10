@@ -1,0 +1,75 @@
+<html>
+    <head>
+      <link rel = "stylesheet" href = "foodchooser.css">
+      <script>
+        function ageCheck()
+         {
+
+        var age = document.getElementById("byear").value;
+        age = parseInt(age);
+        var calcAge = 2021 - age;
+
+        if(calcAge < 10)
+        {
+          document.getElementById("pic1").innerHTML = "<img src = 'apples.jpeg' onclick = printYes()>";
+          document.getElementById("pic2").innerHTML = "<img src = 'pigs.jpeg' onclick = printNo()>";
+          document.getElementById("pic3").innerHTML = "<img src = 'chicken.jpeg' onclick = printYes()>";
+        }
+
+        else if (calcAge > 10)
+        {
+          document.getElementById("pic4").innerHTML = "<img src = 'soup.jpeg' onclick = printYes()>";
+          document.getElementById("pic5").innerHTML = "<img src = 'chickenrice.jpeg' height = 200px onclick = printYes()>";
+          document.getElementById("pic6").innerHTML = "<img src = 'wings.jpeg' onclick = printNo()>";
+        }
+
+        else if(calcAge < 0)
+        {
+          document.getElementById("message").innerHTML = "You are " + calcAge + " years old, Error has occured";
+        }
+
+        else if(calcAge > 200)
+        {
+          document.getElementById("message").innerHTML = "You are " + calcAge + " years old, Error has occured";
+        }
+
+        else {
+          document.getElementById("message").innerHTML = "Error.";
+        }
+      }
+
+         function printYes()
+         {
+           document.getElementById("message").innerHTML = "This is healthy!! Good choice!";
+         }
+
+         function printNo()
+         {
+           document.getElementById("message").innerHTML = "This is not healthy :( Pick another!!";
+         }
+      </script>
+    </head>
+
+    <body>
+      <center>
+        <h1>Get Healthy</h1>
+        <p>Hello party planners. This is a website to help plan food choices at your parties!</p>
+       <input type = "text" placeholder = "Type Birth Year" id = "byear">
+       <input p id = "button1" type = "button" value = "Submit" onclick = "ageCheck()" p id = "sButton">
+       <br><br><br>
+       <table>
+         <tr>
+           <td><p id = "pic1"></p></td>
+           <td><p id = "pic2"></p></td>
+           <td><p id = "pic3"></p></td>
+         </tr>
+       <table>
+         <tr>
+           <td><p id = "pic4"></p></td>
+           <td><p id = "pic5"></p></td>
+           <td><p id = "pic6"></p></td>
+         </tr>
+       </table>
+       <p id = "message"></p>
+    </body>
+</html>
