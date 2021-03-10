@@ -16,19 +16,19 @@
           document.getElementById("pic3").innerHTML = "<img src = 'chicken.jpeg' onclick = printYes()>";
         }
 
-        else if (calcAge > 10)
+       if (calcAge > 10)
         {
           document.getElementById("pic4").innerHTML = "<img src = 'soup.jpeg' onclick = printYes()>";
           document.getElementById("pic5").innerHTML = "<img src = 'chickenrice.jpeg' height = 200px onclick = printYes()>";
           document.getElementById("pic6").innerHTML = "<img src = 'wings.jpeg' onclick = printNo()>";
         }
 
-        else if(calcAge < 0)
+       if(calcAge < 0)
         {
           document.getElementById("message").innerHTML = "You are " + calcAge + " years old, Error has occured";
         }
 
-        else if(calcAge > 200)
+       if(calcAge > 200)
         {
           document.getElementById("message").innerHTML = "You are " + calcAge + " years old, Error has occured";
         }
